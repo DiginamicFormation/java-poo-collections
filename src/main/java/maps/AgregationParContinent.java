@@ -8,8 +8,19 @@ import java.util.Set;
 
 import maps.entites.Pays;
 
+/** Démonstration d'une agrégation avec utilisation d'une MAP.
+ * <br>
+ * L'idée dans cette classe est de montrer comment calculer la population par continent en partant d'un
+ * Set de pays dont on connait le continent d'appartenance ainsi que la population respective.
+ * <br>
+ * @author RichardBONNAMY
+ *
+ */
 public class AgregationParContinent {
 
+	/** Méthode exécutable
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
 		Set<Pays> set = new HashSet<>();
 		set.add(new Pays("France", "Europe", 69_861_344, 43551));
