@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Set;
 
 import sets.entites.Pays;
-import tri.comparators.ComparatorHabitant;
-import tri.comparators.ComparatorPibHabitant;
+import tri.comparators.pays.ComparatorHabitant;
+import tri.comparators.pays.ComparatorPibHabitant;
 
 public class TestTriPays {
 

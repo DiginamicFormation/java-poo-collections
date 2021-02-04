@@ -1,4 +1,4 @@
-package tri.comparators;
+package tri.comparators.pays;
 
 import java.util.Comparator;
 
