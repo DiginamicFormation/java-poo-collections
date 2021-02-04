@@ -53,7 +53,7 @@ public class TestListeInt {
 			}
 		}
 		
-		System.out.println("Le minimum est �gal � : "+min);
+		System.out.println("Le minimum est égal é : "+min);
 		
 		// Suppression du min
 		liste.remove(Integer.valueOf(min));
@@ -66,7 +66,7 @@ public class TestListeInt {
 		}
 		
 		// Affichage
-		System.out.println("Les �l�ments de la liste :");
+		System.out.println("Les éléments de la liste :");
 		for (int entier: liste) {
 			System.out.print(entier);
 			System.out.print(" ");

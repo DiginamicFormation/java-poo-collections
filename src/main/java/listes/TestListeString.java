@@ -1,57 +1,47 @@
 package listes;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
 
-/** Exercice sur les listes: Exercice 4
- * @author RichardBONNAMY
- *
- */
 public class TestListeString {
 
-	/** Méthode exécutable
-	 * @param args non utilisés ici
-	 */
 	public static void main(String[] args) {
-		
-		String[] array = {"Nice", "Carcassonne", "Narbonne", "Lyon", "Foix", "Pau", "Marseille", "Lyon", "Tarbes", "Nice"};
-		List<String> nomVilles = new ArrayList<>();
-		nomVilles.addAll(Arrays.asList(array));
-		
+		ArrayList<String> liste = new ArrayList<>();
+		liste.add("Nice");
+		liste.add("Carcassonne");
+		liste.add("Narbonne");
+		liste.add("Lyon");
+		liste.add("Foix");
+		liste.add("Pau");
+		liste.add("Marseille");
+		liste.add("Tarbes");
+
 		// Recherchez la ville dans cette liste qui a le plus grand nombre de lettres
-		String villePlusGrandNbDeLettres = nomVilles.get(0);
-		for (String nomVille: nomVilles) {
-			if (nomVille.length()>villePlusGrandNbDeLettres.length()) {
-				villePlusGrandNbDeLettres = nomVille;
+		String ref = liste.get(0);
+
+		for (int i = 0; i < liste.size(); i++) {
+			String ville = liste.get(i);
+			if (ville.length() > ref.length()) {
+				ref = ville;
 			}
 		}
-		System.out.println("Nom de ville ayant le plus de lettres : "+villePlusGrandNbDeLettres);
-		
-		// Modifiez le contenu de la liste de manière à mettre tous les noms de villes en majuscules.
-		for (int i=0; i<nomVilles.size(); i++) {
-			String nomVille = nomVilles.get(i);
-			String nomVilleMaj = nomVille.toUpperCase();
-			nomVilles.set(i, nomVilleMaj);
+		System.out.println(ref);
+
+		for (int i = 0; i < liste.size(); i++) {
+			liste.set(i, liste.get(i).toUpperCase());
 		}
+		System.out.println(liste);
 		
-		System.out.println("\nMise en majuscules de tous les noms de villes:");
-		nomVilles.forEach(ville -> System.out.println(ville));
-		
-		// Supprimez de la liste les villes dont le nom commence par la lettre N.
-		Iterator<String> iterator = nomVilles.iterator();
+		Iterator<String> iterator = liste.iterator();
 		while (iterator.hasNext()) {
-			String nomVille = iterator.next();
-			if (nomVille.startsWith("N")) {
+			String ville = iterator.next();
+			if (ville.charAt(0)=='N') {
 				iterator.remove();
 			}
 		}
 		
-		System.out.println("\nAffichage après suppression des noms de villes commençant par N:");
-		nomVilles.forEach(ville -> System.out.println(ville));
+		System.out.println(liste);
+
 	}
 
 }

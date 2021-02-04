@@ -36,7 +36,7 @@ public class FusionListe {
 			listeTotale.add(str);
 		}
 		
-		// Affichage liste r�sultante
+		// Affichage liste résultante
 		System.out.println(listeTotale);
 	}
 }
