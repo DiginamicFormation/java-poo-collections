@@ -38,8 +38,8 @@ public class TestTriVilles {
 		}
 		
 		System.out.println("------------------------------------------");
-		// Tri basé sur l'utilisation du comparator ComparatorNom
-		Collections.sort(villes, new ComparatorNom(false));
+		// Tri avec un comparateur type 'expression lambda'
+		Collections.sort(villes, (v1, v2)->v1.getNom().compareTo(v2.getNom()));
 		
 		for (Ville v: villes) {
 			System.out.println(v);
